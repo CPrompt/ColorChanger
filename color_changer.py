@@ -13,6 +13,7 @@ default_color_value = "#ffffff"
 
 class Colors:
 
+    # read the json file
     def read_json(self,theme_file):
 
         self.theme_file = theme_file
@@ -22,17 +23,25 @@ class Colors:
 
             return(data)
 
+    # ask for key and return value
+    # if no key is found, return default value
+    def get_key_value(self,color_key):
+
+        if color_key in theme_data:
+            color_value = theme_data.get(color_key)
+        else:
+            color_value = default_color_value
+
+        return(color_value)
 
 
 
+'''
 objColors = Colors()
 
 # read the entire datafile
-#theme_data = objColors.read_json("theme1.json")
+theme_data = objColors.read_json("theme1.json")
 
-def get_theme_data(theme_file):
-    theme_data = theme_file
-    return(theme_data)
 
 def get_key_value(color_key):
 
@@ -44,4 +53,4 @@ def get_key_value(color_key):
         color_value = default_color_value
 
     return(color_value)
-
+'''
