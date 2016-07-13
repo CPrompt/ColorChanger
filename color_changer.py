@@ -5,6 +5,7 @@
 # Copyright © 2016 curtis <curtis@wayne-manor.gotham>
 #
 
+import sys
 import json
 
 theme_data = ""
@@ -41,7 +42,7 @@ class Colors:
 objColors = Colors()
 
 # read the entire datafile
-theme_data = objColors.read_json("theme1.json")
+theme_data = objColors.read_json(sys.argv[1])
 
 '''
 def get_key_value(color_key):
