@@ -8,6 +8,7 @@
 import json
 
 theme_data = ""
+theme_file = ""
 color_value = None
 default_color_value = "#ffffff"
 
@@ -38,10 +39,10 @@ class Colors:
 
 
 
-objColors = Colors()
+#objColors = Colors()
 
 # read the entire datafile
-theme_data = objColors.read_json("theme1.json")
+#theme_data = objColors.read_json("theme1.json")
 
 '''
 def get_key_value(color_key):

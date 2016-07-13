@@ -11,6 +11,7 @@
 
 from color_changer import *
 
-objColors = Colors()
+objColors = Colors("theme1.json")
+
 
 print(objColors.get_key_value("color1"))
