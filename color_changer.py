@@ -36,13 +36,14 @@ class Colors:
 
 
 
-'''
+
+
 objColors = Colors()
 
 # read the entire datafile
 theme_data = objColors.read_json("theme1.json")
 
-
+'''
 def get_key_value(color_key):
 
     if color_key in theme_data:
