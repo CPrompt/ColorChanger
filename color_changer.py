@@ -6,7 +6,6 @@
 #
 
 import json
-import os
 
 theme_file = ""
 color_value = None
@@ -29,7 +28,6 @@ class Colors:
     # if no key is found, return default value
     def get_key_value(self,color_key):
 
-        #print(os.path.dirname(os.path.realpath(self.theme_file)))
         theme_data = self.read_json(self.theme_file)
 
         if color_key in theme_data:
@@ -38,10 +36,11 @@ class Colors:
             color_value = default_color_value
         return(color_value)
 
-
+'''
+# testing here
 objColor = Colors()
 print(objColor.read_json('theme1.json'))
 print(objColor.get_key_value('color3'))
-
+'''
 
 
