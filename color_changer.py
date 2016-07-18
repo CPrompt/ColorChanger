@@ -19,10 +19,13 @@ class Colors:
 
         self.theme_file = theme_file
 
-        with open(theme_file) as data_file:
-            data = json.load(data_file)
-
-        return(data)
+        try:
+            with open(theme_file) as data_file:
+                data = json.load(data_file)
+                return(data)
+        except IOError:
+                print "No file to read"
+                return(0)
 
     # ask for key and return value
     # if no key is found, return default value
@@ -34,13 +37,8 @@ class Colors:
             color_value = theme_data.get(color_key)
         else:
             color_value = default_color_value
+
         return(color_value)
 
-'''
-# testing here
-objColor = Colors()
-print(objColor.read_json('theme1.json'))
-print(objColor.get_key_value('color3'))
-'''
 
 
