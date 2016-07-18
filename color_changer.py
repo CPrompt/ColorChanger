@@ -6,6 +6,7 @@
 #
 
 import json
+import sys
 
 theme_file = ""
 color_value = None
@@ -24,7 +25,7 @@ class Colors:
                 data = json.load(data_file)
                 return(data)
         except IOError:
-                print "No file to read"
+                print("File does not exist!")
                 return(0)
 
     # ask for key and return value
@@ -33,12 +34,16 @@ class Colors:
 
         theme_data = self.read_json(self.theme_file)
 
-        if color_key in theme_data:
-            color_value = theme_data.get(color_key)
-        else:
-            color_value = default_color_value
+        try:
+            if color_key in theme_data:
+                color_value = theme_data.get(color_key)
+                return(color_value)
+            else:
+                color_value = default_color_value
+        except TypeError:
+            print("No file!!!")
 
-        return(color_value)
+#        return(color_value)
 
 
 

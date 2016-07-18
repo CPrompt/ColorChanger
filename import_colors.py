@@ -21,8 +21,9 @@ from color_changer import *
 
 objColor = Colors()
 objColor.read_json('theme12.json')
+
 print(objColor.get_key_value('color3'))
-print(objColor.get_key_value('color2'))
+#print(objColor.get_key_value('color2'))
 
 # testing a key that does not exist
-print(objColor.get_key_value('color12'))
+#print(objColor.get_key_value('color12'))
