@@ -23,8 +23,10 @@ objColor = Colors()
 objColor.read_json('theme1.json')
 
 cmus_color = objColor.get_key_value('color3')
+pulse_color = objColor.get_key_value('color1')
 
 print(cmus_color)
+print(pulse_color)
 #print(objColor.get_key_value('color2'))
 
 # testing a key that does not exist
