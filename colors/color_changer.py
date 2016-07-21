@@ -30,7 +30,7 @@ class Colors:
                 return(data)
                 pass
         except IOError:
-                print("File does not exist!")
+                #print("File does not exist!")
                 return(0)
 
     # ask for key and return value
@@ -46,7 +46,11 @@ class Colors:
             else:
                 color_value = default_color_value
         except TypeError:
-            print("No file!!!")
+            # this is here incase we can not get to the theme file
+            # we at least return a color
+            color_value = default_color_value
+            return(color_value)
+            #print("No file!!!")
 
 #        return(color_value)
 
