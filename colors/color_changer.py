@@ -6,11 +6,15 @@
 #
 
 import json
-import sys
+import os
 
 theme_file = ""
 color_value = None
 default_color_value = "#ffffff"
+
+current_path = os.path.dirname(os.path.realpath("__file__"))
+added_directory = "colors"
+new_path = os.path.join(current_path,added_directory)
 
 class Colors:
 
@@ -21,9 +25,10 @@ class Colors:
         self.theme_file = theme_file
 
         try:
-            with open(theme_file) as data_file:
+            with open(os.path.join(new_path,theme_file)) as data_file:
                 data = json.load(data_file)
                 return(data)
+                pass
         except IOError:
                 print("File does not exist!")
                 return(0)
