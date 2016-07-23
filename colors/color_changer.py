@@ -13,8 +13,8 @@ color_value = None
 default_color_value = "#ffffff"
 
 current_path = os.path.dirname(os.path.realpath("__file__"))
-added_directory = "colors"
-new_path = os.path.join(current_path,added_directory)
+theme_directory = "colors"
+new_path = os.path.join(current_path,theme_directory)
 
 class Colors:
 
