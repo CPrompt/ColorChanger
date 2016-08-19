@@ -27,6 +27,8 @@ pulse_color = objColor.get_key_value('color1')
 
 print(cmus_color)
 print(pulse_color)
+print(current_path)
+print(new_path)
 #print(objColor.get_key_value('color2'))
 
 # testing a key that does not exist
