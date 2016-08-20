@@ -17,18 +17,12 @@ default value is set to #ffffff (white)
 make sure the theme file is in the same directory as the main script
 """
 
-from colors.color_changer import *
+from colors import *
 
-objColor = Colors()
-objColor.read_json('theme1.json')
-
-cmus_color = objColor.get_key_value('color3')
-pulse_color = objColor.get_key_value('color1')
 
 print(cmus_color)
-print(pulse_color)
-print(current_path)
-print(new_path)
+print(updates)
+
 #print(objColor.get_key_value('color2'))
 
 # testing a key that does not exist
